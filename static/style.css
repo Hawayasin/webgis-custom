@@ -1,0 +1,199 @@
+/* Map Styles */
+#map {
+    width: 100%;
+    height: 100vh !important; /* full viewport height */
+    min-height: 500px;
+    position: relative;
+    border-radius: 0.375rem;
+    border: none;
+    z-index: 1;
+}
+
+/* Legend Styles */
+.legend.card {
+    background: transparent;
+    border: none;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.legend .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Legend Colors */
+.color-default {
+    background-color: #0d6efd;
+}
+
+.color-selected {
+    background-color: #ffc107;
+}
+
+.color-result {
+    background-color: #dc3545;
+}
+
+.color-marker {
+    background-color: #198754;
+}
+
+/* Custom Controls */
+.custom-controls {
+    background: white;
+    padding: 10px;
+    border-radius: 0.375rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.custom-controls button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    margin: 2px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-controls button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Button Icons */
+#btn-select::before { content: '👆'; }
+#btn-intersect::before { content: '⚡'; }
+#btn-clip::before { content: '✂️'; }
+#btn-dissolve::before { content: '🔄'; }
+#btn-save::before { content: '💾'; }
+
+.floating-controls {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1100;
+}
+
+/* Custom Styles */
+.navbar-brand {
+    font-weight: 500;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    padding: 1rem;
+}
+
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    #map {
+        min-height: 300px;
+    }
+    
+    .legend.card {
+        min-width: 140px;
+    }
+    
+    .legend-item {
+        font-size: 0.75rem;
+    }
+}
+    
+
+.legend h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Warna untuk berbagai jenis fitur */
+.color-selected { background-color: #ff7800; }
+.color-result { background-color: #00ff00; }
+.color-default { background-color: #3388ff; }
+.color-marker { background-color: #e41e25; }
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .custom-controls {
+        margin: 5px;
+    }
+    .legend {
+        bottom: 10px;
+        right: 5px;
+        max-width: calc(100% - 20px);
+    }
+}
